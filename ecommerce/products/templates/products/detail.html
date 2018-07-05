@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+           <h1>{{ object.title }}</h1>
+            <!--ver cuanto tiempo estuvo el usuario viendo-->
+            {{ object.timestamp | timesince }} antes
+            {{ object.description | linebreaks }} <br/>
+            <!--para llamar al campo imagen de un class model, ademas un if si existe la imagen-->
+            {% if object.image %}
+                <img src="{{ object.image.url }}" class="img-fluid">
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

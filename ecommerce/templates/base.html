@@ -1,0 +1,21 @@
+<!--para cargar archivos staticos-->
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hello, world!</title>
+    <!--incluir de otro archivo html-->
+      {% include 'base/css.html' %}
+      {% block head_base %}{% endblock %}
+  </head>
+  <body>
+    <!--se puede crear contexto en html con with-->
+    {% include 'base/navbar.html' with brand_name='eCommerce' %}
+    {% block content %}{% endblock %}-
+    {% include 'base/js.html' %}
+  </body>
+</html>

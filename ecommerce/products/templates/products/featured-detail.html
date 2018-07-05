@@ -1,0 +1,6 @@
+{{ object.title }} <br/>
+{{ object.description }} <br/>
+<!--para llamar al campo imagen de un class model,ademas un if si existe la imagen-->
+{% if object.image %}
+<img src="{{ object.image.url }}" class="img-fluid">
+{% endif %}
