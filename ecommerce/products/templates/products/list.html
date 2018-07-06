@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
+    <div class="row">
 <!--realiza un recorrido de todos los objetos -->
         {% for obj in object_list %}
             <div class="col">
@@ -16,6 +15,6 @@
             </div>
             {% endif %}
         {% endfor %}
-        </div>
     </div>
+
 {% endblock %}
